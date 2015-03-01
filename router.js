@@ -4,7 +4,7 @@ function route(handle, pathname, response){
 		handle[pathname](response);
 	}else{
 		console.log("No request handler found for "+pathname);
-		response.writeHead(200, {"Content-Type" : "plain/text"});
+		response.writeHead(404, {"Content-Type" : "text/plain"});
 		response.write("404 Not Found");
 		response.end();
 	}
